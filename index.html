@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta name="description" content="QA Engineer портфолио — Яна Бадаева">
   <meta name="keywords" content="QA engineer, тестировщик, портфолио, junior qa">
@@ -10,30 +11,34 @@
     @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
     :root {
-      --navy:   #000033;
-      --dark:   #00001a;
-      --teal:   #004040;
-      --green:  #00cc44;
+      --navy: #000033;
+      --dark: #00001a;
+      --teal: #004040;
+      --green: #00cc44;
       --dgreen: #008800;
-      --cyan:   #00cccc;
-      --dcyan:  #006666;
-      --silver: #888888;
-      --white:  #cccccc;
+      --cyan: #00cccc;
+      --dcyan: #006666;
+      --silver: #7c7c7c;
+      --white: #cccccc;
       --yellow: #cccc00;
-      --red:    #cc2200;
+      --red: #cc2200;
       --purple: #440066;
-      --text:   #aaaaaa;
+      --text: #aaaaaa;
     }
 
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
       background-color: var(--dark);
       background-image:
-        radial-gradient(ellipse at 50% 0%, rgba(0,60,80,0.4) 0%, transparent 60%),
-        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,180,100,0.015) 3px, rgba(0,180,100,0.015) 4px);
+        radial-gradient(ellipse at 50% 0%, rgba(0, 60, 80, 0.4) 0%, transparent 60%),
+        repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0, 180, 100, 0.015) 3px, rgba(0, 180, 100, 0.015) 4px);
       font-family: 'Courier New', monospace;
-      font-size: 13px;
+      font-size: 15px;
       color: var(--text);
       min-height: 100vh;
     }
@@ -51,28 +56,39 @@
       color: var(--green);
       text-shadow: 0 0 6px var(--green);
     }
+
     .marquee-inner {
       display: inline-block;
-      animation: marquee 22s linear infinite;
+      animation: marquee 40s linear infinite;
     }
-    @keyframes marquee { from{transform:translateX(100vw)} to{transform:translateX(-100%)} }
+
+    @keyframes marquee {
+      from {
+        transform: translateX(100vw)
+      }
+
+      to {
+        transform: translateX(-100%)
+      }
+    }
 
     /* ── LAYOUT ── */
     .wrapper {
       max-width: 760px;
       margin: 0 auto;
-      padding: 12px 8px 40px;
+      padding: 12px 8px 0px;
     }
 
     /* ── WINDOWS 9x PANEL ── */
     .win {
       background: #111122;
-      border-top:    2px solid #334466;
-      border-left:   2px solid #334466;
-      border-right:  2px solid #000011;
+      border-top: 2px solid #334466;
+      border-left: 2px solid #334466;
+      border-right: 2px solid #000011;
       border-bottom: 2px solid #000011;
       margin-bottom: 10px;
     }
+
     .win-title {
       background: linear-gradient(90deg, #000055 0%, #001133 100%);
       padding: 4px 10px;
@@ -82,74 +98,181 @@
       justify-content: space-between;
       gap: 8px;
     }
+
     .win-title-text {
       font-family: 'VT323', monospace;
       font-size: 16px;
       color: #fff;
       letter-spacing: 1px;
     }
-    .win-btns { display:flex; gap:3px; }
-    .win-btn {
-      width:14px; height:13px; font-size:9px;
-      display:flex; align-items:center; justify-content:center;
-      background:#222244; color:#aaa;
-      border-top:1px solid #334466; border-left:1px solid #334466;
-      border-right:1px solid #000; border-bottom:1px solid #000;
-      cursor:default;
+
+    .win-btns {
+      display: flex;
+      gap: 3px;
     }
-    .win-body { padding: 14px 16px; background: #c0c0c0; }
+
+    .win-btn {
+      width: 14px;
+      height: 13px;
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #222244;
+      color: #aaa;
+      border-top: 1px solid #334466;
+      border-left: 1px solid #334466;
+      border-right: 1px solid #000;
+      border-bottom: 1px solid #000;
+      cursor: default;
+    }
+
+    .win-body {
+      padding: 14px 16px;
+      background: #c0c0c0;
+    }
 
     /* override dark colors for grey bg */
-    .win-body .sec-bar { background:#008080; color:#ffff00; }
+    .win-body .sec-bar {
+      background: #008080;
+      color: #ffff00;
+    }
+
     .win-body .inset {
       background: #d4d0c8;
-      border-top:   1px solid #ffffff;
-      border-left:  1px solid #ffffff;
+      border-top: 1px solid #ffffff;
+      border-left: 1px solid #ffffff;
       border-right: 1px solid #808080;
-      border-bottom:1px solid #808080;
+      border-bottom: 1px solid #808080;
     }
-    .win-body .data-row { color: #000000; }
-    .win-body .data-row strong { color: #800000; }
-    .win-body .data-row a { color: #0000cc; }
-    .win-body .sk-label { color: #000000; }
-    .win-body .sk-label em { color: #444444; }
-    .win-body .doc-desc { color: #333333; }
-    .win-body .doc-title { color: #000080; }
-    .win-body .doc-link { color: #0000cc; }
-    .win-body .ct { color: #000; }
-    .win-body .ct strong { color: #800000; }
-    .win-body .ct a { color: #0000cc; }
-    .win-body .ll { color: #333; }
-    .win-body .ll .ts { color: #666; }
-    .win-body .ll .ok { color: #006600; }
-    .win-body .ll .hi { color: #000; }
-    .win-body p { color: #000; }
-    .win-body .hero-title { color: #000080; text-shadow: 1px 1px 0 #fff; }
-    .win-body .hero-sub { color: #006600; text-shadow: none; }
+
+    .win-body .data-row {
+      color: #000000;
+    }
+
+    .win-body .data-row strong {
+      color: #800000;
+    }
+
+    .win-body .data-row a {
+      color: #0000cc;
+    }
+
+    .win-body .sk-label {
+      color: #000000;
+    }
+
+    .win-body .sk-label em {
+      color: #444444;
+    }
+
+    .win-body .doc-desc {
+      color: #333333;
+    }
+
+    .win-body .doc-title {
+      color: #000080;
+    }
+
+    .win-body .doc-link {
+      color: #0000cc;
+    }
+
+    .win-body .ct {
+      color: #000;
+    }
+
+    .win-body .ct strong {
+      color: #800000;
+    }
+
+    .win-body .ct a {
+      color: #0000cc;
+    }
+
+    .win-body .ll {
+      color: #333;
+    }
+
+    .win-body .ll .ts {
+      color: #666;
+    }
+
+    .win-body .ll .ok {
+      color: #006600;
+    }
+
+    .win-body .ll .hi {
+      color: #000;
+    }
+
+    .win-body p {
+      color: #000;
+    }
+
+    .win-body .hero-title {
+      color: #000080;
+      text-shadow: 1px 1px 0 #fff;
+    }
+
+    .win-body .hero-sub {
+      color: #006600;
+      text-shadow: none;
+    }
+
     .win-body .hero-banner {
       background: #d4d0c8;
       border: 2px inset #808080;
     }
+
     .win-body .job-box {
       background: #ffff99;
       border: 2px dashed #cc0000;
       color: #cc0000;
     }
-    .win-body .chip { background:#d4d0c8; color:#000066; border-top:1px solid #fff; border-left:1px solid #fff; border-right:1px solid #808080; border-bottom:1px solid #808080; }
-    .win-body .chip:hover { background:#000080; color:#fff; }
-    .win-body .footer-banner { background: #800080; }
-    .win-body .copyright { background: #000080; }
-    .win-body .copyright p { color: #00ff00; }
-    .win-body .gif-item { background: #d4d0c8; border-color: #808080; }
-    .win-body .doc-item { border-bottom-color: #aaaaaa; }
+
+    .win-body .chip {
+      background: #d4d0c8;
+      color: #000066;
+      border-top: 1px solid #fff;
+      border-left: 1px solid #fff;
+      border-right: 1px solid #808080;
+      border-bottom: 1px solid #808080;
+    }
+
+    .win-body .chip:hover {
+      background: #000080;
+      color: #fff;
+    }
+
+    .win-body .footer-banner {
+      background: #800080;
+    }
+
+    .win-body .copyright {
+      background: #000080;
+    }
+
+    .win-body .copyright p {
+      color: #00ff00;
+    }
+
+    .win-body .gif-item {
+      background: #d4d0c8;
+      border-color: #808080;
+    }
+
+    .win-body .doc-item {
+      border-bottom-color: #aaaaaa;
+    }
 
     /* section headers like Win95 toolbar */
     .sec-bar {
       background: var(--teal);
       padding: 4px 8px;
-      border-top:    1px solid var(--cyan);
-      border-left:   1px solid var(--cyan);
-      border-right:  1px solid #002222;
+      border-top: 1px solid var(--cyan);
+      border-left: 1px solid var(--cyan);
+      border-right: 1px solid #002222;
       border-bottom: 1px solid #002222;
       margin-bottom: 8px;
       font-family: 'VT323', monospace;
@@ -157,14 +280,17 @@
       color: var(--yellow);
       letter-spacing: 1px;
     }
-    .sec-bar::before { content: '► '; }
+
+    .sec-bar::before {
+      content: '► ';
+    }
 
     /* inset boxes */
     .inset {
       background: #080810;
-      border-top:    1px solid #000011;
-      border-left:   1px solid #000011;
-      border-right:  1px solid #334466;
+      border-top: 1px solid #000011;
+      border-left: 1px solid #000011;
+      border-right: 1px solid #334466;
       border-bottom: 1px solid #334466;
       padding: 10px 12px;
       margin-bottom: 10px;
@@ -180,41 +306,48 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero-banner::before {
-      content:'';
-      position:absolute; inset:0;
-      background: repeating-linear-gradient(
-        0deg, transparent, transparent 4px,
-        rgba(0,100,80,0.06) 4px, rgba(0,100,80,0.06) 5px
-      );
-      pointer-events:none;
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg, transparent, transparent 4px,
+          rgba(0, 100, 80, 0.06) 4px, rgba(0, 100, 80, 0.06) 5px);
+      pointer-events: none;
     }
+
     .hero-title {
       font-family: 'VT323', monospace;
       font-size: 38px;
       color: var(--cyan);
-      text-shadow: 0 0 12px rgba(0,200,200,0.5), 2px 2px 0 #000;
+      text-shadow: 0 0 12px rgba(0, 200, 200, 0.5), 2px 2px 0 #000;
       letter-spacing: 3px;
       line-height: 1;
       margin-bottom: 6px;
     }
+
     .hero-sub {
       font-family: 'VT323', monospace;
       font-size: 20px;
       color: var(--green);
-      text-shadow: 0 0 8px rgba(0,200,80,0.4);
+      text-shadow: 0 0 8px rgba(0, 200, 80, 0.4);
       letter-spacing: 2px;
       margin-bottom: 10px;
     }
-    .hero-sub::before { content: '>> '; color: #336633; }
+
+    .hero-sub::before {
+      content: '>> ';
+      color: #336633;
+    }
 
     .welcome-box {
       display: inline-block;
-      background: #110022;
+      background: #566678;
       border: 2px dashed #440066;
       padding: 6px 16px;
       margin-bottom: 10px;
     }
+
     .welcome-text {
       font-family: 'VT323', monospace;
       font-size: 20px;
@@ -222,7 +355,12 @@
       letter-spacing: 1px;
       animation: blink-txt 1.2s step-end infinite;
     }
-    @keyframes blink-txt { 50%{opacity:0.2} }
+
+    @keyframes blink-txt {
+      50% {
+        opacity: 0.2
+      }
+    }
 
     .job-box {
       background: #110000;
@@ -232,135 +370,288 @@
       font-family: 'VT323', monospace;
       font-size: 18px;
       color: var(--red);
-      text-shadow: 0 0 8px rgba(200,0,0,0.4);
+      text-shadow: 0 0 8px rgba(200, 0, 0, 0.4);
       text-align: center;
     }
 
     /* ── DATA ROWS ── */
-    .data-row { margin-bottom: 6px; font-size: 13px; color: var(--text); line-height: 1.7; }
-    .data-row strong { color: var(--red); }
-    .data-row a { color: var(--cyan); text-decoration: underline; }
-    .data-row a:hover { color: var(--green); }
+    .data-row {
+      margin-bottom: 6px;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .data-row strong {
+      color: var(--red);
+    }
+
+    .data-row a {
+      color: var(--cyan);
+      text-decoration: underline;
+    }
+
+    .data-row a:hover {
+      color: var(--green);
+    }
 
     /* ── CHIPS ── */
-    .chip-wrap { display:flex; flex-wrap:wrap; gap:6px; }
+    .chip-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
     .chip {
-      font-family: 'VT323', monospace; font-size: 15px;
+      font-family: 'VT323', monospace;
+      font-size: 15px;
       padding: 1px 10px;
-      border-top:    1px solid #334466;
-      border-left:   1px solid #334466;
-      border-right:  1px solid #000;
+      border-top: 1px solid #334466;
+      border-left: 1px solid #334466;
+      border-right: 1px solid #000;
       border-bottom: 1px solid #000;
       cursor: default;
       transition: none;
     }
-    .chip:hover { filter: brightness(1.3); }
-    .c1 { background:#220033; color:#cc44ff; }
-    .c2 { background:#002222; color:var(--cyan); }
-    .c3 { background:#222200; color:var(--yellow); }
-    .c4 { background:#220011; color:#ff6644; }
-    .c5 { background:#000033; color:#4488ff; }
-    .c6 { background:#002200; color:var(--green); }
-    .c7 { background:#110022; color:#aa44ff; }
+
+    .chip:hover {
+      filter: brightness(1.3);
+    }
+
+    .c1 {
+      background: #220033;
+      color: #cc44ff;
+    }
+
+    .c2 {
+      background: #002222;
+      color: var(--cyan);
+    }
+
+    .c3 {
+      background: #222200;
+      color: var(--yellow);
+    }
+
+    .c4 {
+      background: #220011;
+      color: #ff6644;
+    }
+
+    .c5 {
+      background: #000033;
+      color: #4488ff;
+    }
+
+    .c6 {
+      background: #002200;
+      color: var(--green);
+    }
+
+    .c7 {
+      background: #110022;
+      color: #aa44ff;
+    }
 
     /* ── SKILL BARS ── */
-    .sk { margin-bottom: 8px; }
-    .sk-label {
-      font-size:12px; color:var(--white); margin-bottom:4px;
-      font-weight:bold; display:flex; justify-content:space-between;
+    .sk {
+      margin-bottom: 8px;
     }
-    .sk-label em { font-style:normal; color:var(--silver); font-size:11px; }
-    .skill-bar{
-  height:20px;
-  background:#c0c0c0;
-  border-top:2px solid #808080;
-  border-left:2px solid #808080;
-  border-right:2px solid #ffffff;
-  border-bottom:2px solid #ffffff;
-  padding:2px;
-}
 
-.skill-fill{
-  height:100%;
-  background:
-    repeating-linear-gradient(
-      to right,
-      #555555 0px,
-      #555555 16px,
-      transparent 16px,
-      transparent 20px
-    );
-}
+    .sk-label {
+      font-size: 12px;
+      color: var(--white);
+      margin-bottom: 4px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sk-label em {
+      font-style: normal;
+      color: var(--silver);
+      font-size: 11px;
+    }
+
+    .skill-bar {
+      height: 20px;
+      background: #c0c0c0;
+      border-top: 2px solid #808080;
+      border-left: 2px solid #808080;
+      border-right: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      padding: 2px;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background:
+        repeating-linear-gradient(to right,
+          #555555 0px,
+          #555555 16px,
+          transparent 16px,
+          transparent 20px);
+    }
 
     /* ── DOC LINKS ── */
     .doc-item {
       padding: 8px 0;
       border-bottom: 1px dashed #223322;
     }
-    .doc-item:last-child { border-bottom: none; }
-    .doc-title { font-size:14px; color:#4488cc; font-weight:bold; margin-bottom:3px; }
-    .doc-title::before { content: '→ '; color: var(--dcyan); }
-    .doc-desc { font-size:12px; color:var(--silver); line-height:1.6; margin-bottom:4px; }
-    .doc-link { font-size:11px; color:var(--cyan); text-decoration:underline; cursor:pointer; }
-    .doc-link:hover { color: var(--green); }
+
+    .doc-item:last-child {
+      border-bottom: none;
+    }
+
+    .doc-title {
+      font-size: 14px;
+      color: #4488cc;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .doc-title::before {
+      content: '→ ';
+      color: var(--dcyan);
+    }
+
+    .doc-desc {
+      font-size: 15px;
+      color: var(--silver);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+
+    .doc-link {
+      font-size: 11px;
+      color: var(--cyan);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .doc-link:hover {
+      color: var(--green);
+    }
 
     /* ── CONTACT ── */
-    .ct { display:flex; align-items:center; gap:8px; margin-bottom:8px; font-size:13px; }
-    .ct strong { color: var(--red); min-width:90px; }
-    .ct a { color: var(--cyan); text-decoration:underline; }
-    .ct a:hover { color: var(--green); }
+    .ct {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+
+    .ct strong {
+      color: var(--red);
+      min-width: 90px;
+    }
+
+    .ct a {
+      color: var(--cyan);
+      text-decoration: underline;
+    }
+
+    .ct a:hover {
+      color: var(--green);
+    }
 
     /* ── FOOTER BANNER ── */
     .footer-banner {
       background: var(--purple);
       border: 3px double var(--yellow);
       padding: 12px;
-      text-align:center;
+      text-align: center;
       margin-bottom: 10px;
     }
+
     .footer-banner p:first-child {
-      font-family:'VT323',monospace; font-size:18px;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
       color: var(--yellow);
-      margin-bottom:5px;
+      margin-bottom: 10px;
     }
-    .footer-banner p:last-child { font-size:11px; color:#aaa; }
+
+    .footer-banner p:last-child {
+      font-size: 11px;
+      color: #aaa;
+    }
 
     /* 88x31 badges */
-    .badges { display:flex; justify-content:center; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
-    .badge-88 {
-      width:88px; height:31px; font-size:8px;
-      display:flex; align-items:center; justify-content:center;
-      text-align:center; font-weight:bold;
-      border: 1px solid #000;
-      line-height:1.2;
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
     }
-    .b-ie    { background:#1155bb; color:#fff; }
-    .b-w3    { background:#cc2200; color:#fff; }
-    .b-best  { background:#008800; color:#fff; }
-    .b-made  { background:#333; color:#00ff00; font-family:'VT323',monospace; font-size:11px; }
+
+    .badge-88 {
+      width: 88px;
+      height: 31px;
+      font-size: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      border: 1px solid #000;
+      line-height: 1.2;
+    }
+
+    .b-ie {
+      background: #1155bb;
+      color: #fff;
+    }
+
+    .b-w3 {
+      background: #cc2200;
+      color: #fff;
+    }
+
+    .b-best {
+      background: #008800;
+      color: #fff;
+    }
+
+    .b-made {
+      background: #333;
+      color: #00ff00;
+      font-family: 'VT323', monospace;
+      font-size: 11px;
+    }
 
     /* footer copyright */
     .copyright {
-      background:#000;
+      background: #000;
       border: 2px solid #223322;
-      padding:10px;
-      text-align:center;
+      padding: 10px;
+      text-align: center;
     }
-    .copyright p { font-size:11px; color:var(--green); font-family:'Courier New',monospace; line-height:1.8; }
+
+    .copyright p {
+      font-size: 11px;
+      color: var(--green);
+      font-family: 'Courier New', monospace;
+      line-height: 1.8;
+    }
 
     /* visitor counter */
     .counter {
-      text-align:center; margin-top:14px;
-      font-family:'VT323',monospace; font-size:18px;
+      text-align: center;
+      padding: 10px 0px;
+      font-family: 'VT323', monospace;
+      font-size: 18px;
       color: var(--yellow);
       text-shadow: 2px 2px 0 #000;
     }
+
     .counter-num {
-      display:inline-block;
-      background:#000;
+      display: inline-block;
+      background: #000;
       border: 1px solid #444;
       padding: 2px 8px;
-      letter-spacing:4px;
+      letter-spacing: 4px;
       color: var(--green);
       font-size: 22px;
       text-shadow: 0 0 6px var(--green);
@@ -368,217 +659,358 @@
 
     /* ── GLITCH NAME ── */
     .glitch {
-      position:relative; display:inline-block;
+      position: relative;
+      display: inline-block;
     }
-    .glitch::before, .glitch::after {
-      content:attr(data-text);
-      position:absolute; top:0; left:0; width:100%;
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
       animation: gl 8s steps(1) infinite;
     }
-    .glitch::before { color:#ff0044; clip-path:polygon(0 20%,100% 20%,100% 35%,0 35%); }
-    .glitch::after  { color:#00ffcc; clip-path:polygon(0 65%,100% 65%,100% 75%,0 75%); animation-delay:.05s; }
-    @keyframes gl{0%,92%,100%{transform:none;opacity:0}93%{transform:translateX(-3px);opacity:.8}94%{opacity:0}95%{transform:translateX(3px);opacity:.6}96%{opacity:0}}
+
+    .glitch::before {
+      color: #ff0044;
+      clip-path: polygon(0 20%, 100% 20%, 100% 35%, 0 35%);
+    }
+
+    .glitch::after {
+      color: #00ffcc;
+      clip-path: polygon(0 65%, 100% 65%, 100% 75%, 0 75%);
+      animation-delay: .05s;
+    }
+
+    @keyframes gl {
+
+      0%,
+      92%,
+      100% {
+        transform: none;
+        opacity: 0
+      }
+
+      93% {
+        transform: translateX(-3px);
+        opacity: .8
+      }
+
+      94% {
+        opacity: 0
+      }
+
+      95% {
+        transform: translateX(3px);
+        opacity: .6
+      }
+
+      96% {
+        opacity: 0
+      }
+    }
 
     /* whisper */
     .whisper {
-      position:fixed; font-family:'VT323',monospace; font-size:14px;
-      color:#223322; opacity:0; pointer-events:none; z-index:999;
-      white-space:nowrap; letter-spacing:2px;
+      position: fixed;
+      font-family: 'VT323', monospace;
+      font-size: 14px;
+      color: #223322;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 999;
+      white-space: nowrap;
+      letter-spacing: 2px;
       animation: wfade 5s ease forwards;
     }
-    @keyframes wfade{12%{opacity:.2}75%{opacity:.2}100%{opacity:0}}
+
+    @keyframes wfade {
+      12% {
+        opacity: .2
+      }
+
+      75% {
+        opacity: .2
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
 
     /* animated gif placeholders */
-    .gif-row { display:flex; justify-content:center; gap:10px; margin:10px 0; flex-wrap:wrap; }
+    .gif-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 10px 0;
+      flex-wrap: wrap;
+    }
+
     .gif-item {
-      width:60px; height:60px;
-      border:1px solid #334466;
-      display:flex; align-items:center; justify-content:center;
-      font-size:22px;
-      background:#000;
+      width: 60px;
+      height: 60px;
+      border: 1px solid #334466;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      background: #000;
       animation: gifwiggle 0.5s ease infinite alternate;
     }
-    .gif-item:nth-child(2){ animation-delay:.15s; }
-    .gif-item:nth-child(3){ animation-delay:.3s; }
-    .gif-item:nth-child(4){ animation-delay:.45s; }
-    @keyframes gifwiggle{ from{transform:rotate(-4deg) scale(1)} to{transform:rotate(4deg) scale(1.06)} }
+
+    .gif-item:nth-child(2) {
+      animation-delay: .15s;
+    }
+
+    .gif-item:nth-child(3) {
+      animation-delay: .3s;
+    }
+
+    .gif-item:nth-child(4) {
+      animation-delay: .45s;
+    }
+
+    @keyframes gifwiggle {
+      from {
+        transform: rotate(-4deg) scale(1)
+      }
+
+      to {
+        transform: rotate(4deg) scale(1.06)
+      }
+    }
 
     /* scrollbar */
-    ::-webkit-scrollbar { width:8px; }
-    ::-webkit-scrollbar-track { background:#000011; }
-    ::-webkit-scrollbar-thumb { background:#223344; }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000011;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #223344;
+    }
   </style>
 </head>
+
 <body>
 
-<!-- TOP MARQUEE -->
-<div class="marquee-bar">
-  <span class="marquee-inner">
-    ★★★ WELCOME TO BADAEVA YANA QA HOMEPAGE ★★★ &nbsp;&nbsp;&nbsp;
-    CURRENTLY LOOKING FOR JOB ★ BEST VIEWED IN 800x600 ★ NETSCAPE NAVIGATOR 4.0 ★&nbsp;&nbsp;&nbsp;
-    ★ NO BUGS FOUND ON THIS PAGE... PROBABLY ★&nbsp;&nbsp;&nbsp;
-    ★ PRESENT DAY. PRESENT TIME. HA HA HA. ★&nbsp;&nbsp;&nbsp;
-    ★★★ WELCOME TO BADAEVA YANA QA HOMEPAGE ★★★
-  </span>
-</div>
+  <!-- TOP MARQUEE -->
+  <div class="marquee-bar">
+    <span class="marquee-inner">
+      ★★★ WELCOME TO BADAEVA YANA QA HOMEPAGE ★★★ &nbsp;&nbsp;&nbsp;
+      CURRENTLY LOOKING FOR JOB ★ BEST VIEWED IN 800x600 ★ NETSCAPE NAVIGATOR 4.0 ★&nbsp;&nbsp;&nbsp;
+      ★ NO BUGS FOUND ON THIS PAGE... PROBABLY ★&nbsp;&nbsp;&nbsp;
+      ★ PRESENT DAY. PRESENT TIME. HA HA HA. ★&nbsp;&nbsp;&nbsp;
+      ★★★ WELCOME TO BADAEVA YANA QA HOMEPAGE ★★★
+    </span>
+  </div>
 
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- MAIN WINDOW -->
-  <div class="win">
-    <div class="win-title">
-      <span class="win-title-text">📁 BADAEVA YANA — QA ENGINEER HOMEPAGE</span>
-      <div class="win-btns">
-        <div class="win-btn">_</div>
-        <div class="win-btn">□</div>
-        <div class="win-btn">×</div>
-      </div>
-    </div>
-    <div class="win-body">
-
-      <!-- HERO -->
-      <div class="hero-banner">
-        <div class="hero-title">
-          <span class="glitch" data-text="Junior QA Engineer">Junior QA Engineer</span>
-        </div>
-        <div class="hero-sub">Бадаева Яна</div>
-        <div class="welcome-box">
-          <span class="welcome-text">★ WELCOME TO MY HOMEPAGE ★</span>
-        </div>
-        <div style="font-size:11px;color:#556655;margin-top:6px;">Last Updated: January 2026</div>
-      </div>
-
-      <div class="job-box">🔥 CURRENTLY LOOKING FOR JOB OPPORTUNITIES! 🔥</div>
-
-      <!-- ABOUT ME -->
-      <div class="sec-bar">ABOUT ME</div>
-      <div class="inset">
-        <div class="data-row"><strong>Name:</strong> Яна Бадаева</div>
-        <div class="data-row"><strong>Speciality:</strong> Junior QA Engineer</div>
-        <div class="data-row"><strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#e68788888392c88a938d8da6818b878f8ac885898b"><span class="__cf_email__" data-cfemail="c0a1aeaea5b4eeacb5abab80a7ada1a9aceea3afad">[email&#160;protected]</span></a></div>
-        <div class="data-row"><strong>Telegram:</strong> @nan_buddvaya</div>
-      </div>
-
-      <!-- MY STORY -->
-      <div class="sec-bar">MY STORY</div>
-      <div class="inset">
-        <p style="font-size:13px;line-height:1.8;">
-          Currently I am studying testing: create test cases, find bugs, and document the results.
-          I am looking for an opportunity to apply my knowledge in practice and grow within a team.
-        </p>
-      </div>
-
-      <!-- WORK EXPERIENCE -->
-      <div class="sec-bar">WORK EXPERIENCE</div>
-      <div class="inset">
-        <div class="data-row"><strong style="color:var(--dgreen);">2023–2025:</strong> Norbit — Бизнес-аналитик</div>
-      </div>
-
-      <!-- TOOLS -->
-      <div class="sec-bar">TOOLS &amp; TECHNOLOGIES</div>
-      <div class="inset">
-        <div class="chip-wrap">
-          <span class="chip c1">JIRA</span>
-          <span class="chip c2">DEVTOOLS</span>
-          <span class="chip c3">GIT</span>
-          <span class="chip c4">FIGMA</span>
-          <span class="chip c5">SQL</span>
-          <span class="chip c6">BITRIX24</span>
-          <span class="chip c7">BPMN</span>
+    <!-- MAIN WINDOW -->
+    <div class="win">
+      <div class="win-title">
+        <span class="win-title-text">📁 BADAEVA YANA — QA ENGINEER HOMEPAGE</span>
+        <div class="win-btns">
+          <div class="win-btn">_</div>
+          <div class="win-btn">□</div>
+          <div class="win-btn">×</div>
         </div>
       </div>
+      <div class="win-body">
 
-      <!-- SKILLS -->
-      <div class="sec-bar">MY SKILLS</div>
-      <div class="inset">
-        <div class="sk">
-<div class="sk-label">Теория тестирования <em>80%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-</div>
-
-<div class="sk">
-<div class="sk-label">Проектная документация <em>75%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-</div>
-
-<div class="sk">
-<div class="sk-label">Ручное тестирование <em>50%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
-</div>
-        <div class="sk">
-<div class="sk-label">Постановка задач разработчикам <em>45%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
-</div>
-
-<div class="sk">
-<div class="sk-label">Функц. / регресс. / smoke / UI <em>40%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-</div>
-
-<div class="sk">
-<div class="sk-label">Кроссбраузерное тестирование <em>40%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
-</div>
-       <div class="sk">
-<div class="sk-label">HTTP / REST API <em>35%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
-</div>
-
-<div class="sk">
-<div class="sk-label">SQL / HTML / CSS / JS <em>30%</em></div>
-<div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
-</div> 
-        
-      <!-- EDUCATION -->
-      <div class="sec-bar">EDUCATION</div>
-      <div class="inset">
-        <div class="data-row"><strong style="color:var(--dgreen);">2024:</strong> Фундаментальная и прикладная лингвистика — неоконченное высшее</div>
-        <div class="data-row"><strong style="color:var(--dgreen);">2018:</strong> Банковское дело — среднее специальное</div>
-      </div>
-
-      <!-- PROJECTS -->
-      <div class="sec-bar">MY PROJECTS &amp; ARTIFACTS</div>
-      <div class="inset">
-        <div style="font-size:12px;color:var(--red);margin-bottom:8px;font-weight:bold;">
-          ★ Testing learning artefacts — compiled independently
+        <!-- HERO -->
+        <div class="hero-banner">
+          <div class="hero-title">
+            <span class="glitch" data-text="Junior QA Engineer">Junior QA Engineer</span>
+          </div>
+          <div class="hero-sub">Бадаева Яна</div>
+          <div class="welcome-box">
+            <span class="welcome-text">★ WELCOME TO MY HOMEPAGE ★</span>
+          </div>
+          <div style="font-size:11px;color:#556655;margin-top:6px;">Last Updated: January 2026</div>
         </div>
-        <div class="doc-item">
-          <div class="doc-title">Test-cases</div>
-          <div class="doc-desc">Test cases created based on: product requirements, application behavior, test design artifacts</div>
-          <a class="doc-link" href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/test_cases" target="_blank">[CLICK HERE TO VIEW]</a>
-        </div>
-        <div class="doc-item">
-          <div class="doc-title">Bug reports</div>
-          <div class="doc-desc">Bug reports created based on: functional testing, observed application behavior, test design artifacts.</div>
-          <a class="doc-link" href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/bug_reports" target="_blank">[CLICK HERE TO VIEW]</a>
-        </div>
-        <div class="doc-item">
-          <div class="doc-title">Crowdtesting</div>
-          <div class="doc-desc">Participation in a crowdtesting project on the Passbrains platform. The project focused on functional and UI testing of a web application.</div>
-          <a class="doc-link" href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/crowdtesting" target="_blank">[CLICK HERE TO VIEW]</a>
-        </div>
-        <div class="doc-item">
-          <div class="doc-title">Test designs</div>
-          <div class="doc-desc">This folder demonstrates the use of different test design techniques for learning and practice purposes.</div>
-          <a class="doc-link" href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/test_designs" target="_blank">[CLICK HERE TO VIEW]</a>
-        </div>
-      </div>
 
-      <!-- CONTACT -->
-      <div class="sec-bar">CONTACT ME</div>
-      <div class="inset">
-        <div class="ct"><strong>📧 Email:</strong>    <a href="/cdn-cgi/l/email-protection#086966666d7c26647d6363486f65696164266b6765"><span class="__cf_email__" data-cfemail="badbd4d4dfce94d6cfd1d1faddd7dbd3d694d9d5d7">[email&#160;protected]</span></a></div>
-        <div class="ct"><strong>💬 Telegram:</strong> <a href="https://t.me/nan_buddvaya" target="_blank">@nan_buddvaya</a></div>
-        <div class="ct"><strong>🐙 GitHub:</strong>   <a href="https://github.com/nannbadd" target="_blank">github.com/nannbadd</a></div>
-        <div class="ct"><strong>💼 LinkedIn:</strong> <a href="https://linkedin.com/in/yana-badaeva-dotcom" target="_blank">linkedin.com/in/yana-badaeva-dotcom</a></div>
-        <div class="ct"><strong>📄 HeadHunter:</strong> <a href="https://hh.ru/resume/a32e8c43ff0faaa7a10039ed1f5a6d4c576d58" target="_blank">hh.ru/resume/a32e8c43…</a></div>
-      </div>
+        <div class="job-box">🔥 CURRENTLY LOOKING FOR JOB OPPORTUNITIES! 🔥</div>
 
-      <!-- HIRE ME -->
-      <div style="background:#000;border:3px double #336633;padding:14px;text-align:center;margin-bottom:10px;position:relative;overflow:hidden;">
-        <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(0,80,0,0.04) 40px,rgba(0,80,0,0.04) 41px);pointer-events:none;"></div>
-        <!-- ASCII cat -->
-        <pre style="font-family:'Courier New',monospace;font-size:11px;color:#557755;line-height:1.3;margin-bottom:10px;display:inline-block;text-align:left;">
+        <!-- ABOUT ME -->
+        <div class="sec-bar">ABOUT ME</div>
+        <div class="inset">
+          <div class="data-row"><strong>Name:</strong> Яна Бадаева</div>
+          <div class="data-row"><strong>Speciality:</strong> Junior QA Engineer</div>
+          <div class="data-row"><strong>Email:</strong> <a
+              href="/cdn-cgi/l/email-protection#e68788888392c88a938d8da6818b878f8ac885898b"><span class="__cf_email__"
+                data-cfemail="c0a1aeaea5b4eeacb5abab80a7ada1a9aceea3afad"> annet.lukk@gmail.com</span></a></div>
+          <div class="data-row"><strong>Telegram:</strong> @nan_buddvaya</div>
+        </div>
+
+        <!-- MY STORY -->
+        <div class="sec-bar">MY STORY</div>
+        <div class="inset">
+          <p style="font-size:15px;line-height:1.8;">
+            Currently I am studying testing: create test cases, find bugs, and document the results.
+            I am looking for an opportunity to apply my knowledge in practice and grow within a team.
+          </p>
+        </div>
+
+        <!-- WORK EXPERIENCE -->
+        <div class="sec-bar">WORK EXPERIENCE</div>
+        <div class="inset">
+          <div class="data-row"><strong style="color:var(--dgreen);">2023–2025:</strong> Norbit — Бизнес-аналитик</div>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="sec-bar">TOOLS &amp; TECHNOLOGIES</div>
+        <div class="inset">
+          <div class="chip-wrap">
+            <span class="chip c1">JIRA</span>
+            <span class="chip c2">DEVTOOLS</span>
+            <span class="chip c3">GIT</span>
+            <span class="chip c4">FIGMA</span>
+            <span class="chip c5">SQL</span>
+            <span class="chip c6">BITRIX24</span>
+            <span class="chip c7">BPMN</span>
+          </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="sec-bar">MY SKILLS</div>
+        <div class="inset">
+          <div class="sk">
+            <div class="sk-label">Теория тестирования <em>80%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:80%"></div>
+            </div>
+          </div>
+
+          <div class="sk">
+            <div class="sk-label">Проектная документация <em>75%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:75%"></div>
+            </div>
+          </div>
+
+          <div class="sk">
+            <div class="sk-label">Ручное тестирование <em>50%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:50%"></div>
+            </div>
+          </div>
+          <div class="sk">
+            <div class="sk-label">Постановка задач разработчикам <em>45%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:80%"></div>
+            </div>
+          </div>
+
+          <div class="sk">
+            <div class="sk-label">Функц. / регресс. / smoke / UI <em>40%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:75%"></div>
+            </div>
+          </div>
+
+          <div class="sk">
+            <div class="sk-label">Кроссбраузерное тестирование <em>40%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:50%"></div>
+            </div>
+          </div>
+          <div class="sk">
+            <div class="sk-label">HTTP / REST API <em>35%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:75%"></div>
+            </div>
+          </div>
+
+          <div class="sk">
+            <div class="sk-label">SQL / HTML / CSS / JS <em>30%</em></div>
+            <div class="skill-bar">
+              <div class="skill-fill" style="width:50%"></div>
+            </div>
+          </div>
+
+          <!-- EDUCATION -->
+          <div class="sec-bar">EDUCATION</div>
+          <div class="inset">
+            <div class="data-row"><strong style="color:var(--dgreen);">2024:</strong> Фундаментальная и прикладная
+              лингвистика — неоконченное высшее</div>
+            <div class="data-row"><strong style="color:var(--dgreen);">2018:</strong> Банковское дело — среднее
+              специальное</div>
+          </div>
+
+          <!-- PROJECTS -->
+          <div class="sec-bar">MY PROJECTS &amp; ARTIFACTS</div>
+          <div class="inset">
+            <div style="font-size:15px;color:var(--red);margin-bottom:8px;font-weight:bold;">
+              ★ Testing learning artefacts — compiled independently
+            </div>
+            <div class="doc-item">
+              <div class="doc-title">Test-cases</div>
+              <div class="doc-desc">Test cases created based on: product requirements, application behavior, test design
+                artifacts</div>
+              <a class="doc-link"
+                href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/test_cases"
+                target="_blank">[CLICK HERE TO VIEW]</a>
+            </div>
+            <div class="doc-item">
+              <div class="doc-title">Bug reports</div>
+              <div class="doc-desc">Bug reports created based on: functional testing, observed application behavior,
+                test design artifacts.</div>
+              <a class="doc-link"
+                href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/bug_reports"
+                target="_blank">[CLICK HERE TO VIEW]</a>
+            </div>
+            <div class="doc-item">
+              <div class="doc-title">Crowdtesting</div>
+              <div class="doc-desc">Participation in a crowdtesting project on the Passbrains platform. The project
+                focused on functional and UI testing of a web application.</div>
+              <a class="doc-link"
+                href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/crowdtesting"
+                target="_blank">[CLICK HERE TO VIEW]</a>
+            </div>
+            <div class="doc-item">
+              <div class="doc-title">Test designs</div>
+              <div class="doc-desc">This folder demonstrates the use of different test design techniques for learning
+                and practice purposes.</div>
+              <a class="doc-link"
+                href="https://github.com/nannbadd/qa_docs/tree/9c44a917d9abebb1d5a99f48db98aa6a366cb8e5/test_designs"
+                target="_blank">[CLICK HERE TO VIEW]</a>
+            </div>
+          </div>
+
+          <!-- CONTACT -->
+          <div class="sec-bar">CONTACT ME</div>
+          <div class="inset">
+            <div class="ct"><strong>📧 Email:</strong> <a
+                href="/cdn-cgi/l/email-protection#086966666d7c26647d6363486f65696164266b6765"><span class="__cf_email__"
+                  data-cfemail="badbd4d4dfce94d6cfd1d1faddd7dbd3d694d9d5d7"> annet.lukk@gmail.com</span></a></div>
+            <div class="ct"><strong>💬 Telegram:</strong> <a href="https://t.me/nan_buddvaya"
+                target="_blank">@nan_buddvaya</a></div>
+            <div class="ct"><strong>🐙 GitHub:</strong> <a href="https://github.com/nannbadd"
+                target="_blank">github.com/nannbadd</a></div>
+            <div class="ct"><strong>💼 LinkedIn:</strong> <a href="https://linkedin.com/in/yana-badaeva-dotcom"
+                target="_blank">linkedin.com/in/yana-badaeva-dotcom</a></div>
+            <div class="ct"><strong>📄 HeadHunter:</strong> <a
+                href="https://hh.ru/resume/a32e8c43ff0faaa7a10039ed1f5a6d4c576d58"
+                target="_blank">hh.ru/resume/a32e8c43…</a></div>
+          </div>
+
+          <!-- HIRE ME -->
+          <div
+            style="background:#000;border:3px double #336633;padding:14px;text-align:center;margin-bottom:10px;position:relative;overflow:hidden;">
+            <div
+              style="position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(90deg,transparent,transparent 40px,rgba(0,80,0,0.04) 40px,rgba(0,80,0,0.04) 41px);pointer-events:none;">
+            </div>
+            <!-- ASCII cat -->
+            <pre
+              style="font-family:'Courier New',monospace;font-size:11px;color:#557755;line-height:1.3;margin-bottom:10px;display:inline-block;text-align:left;">
   /\_____/\
  (  o   o  )
  (  =   =  )    meow...
@@ -586,115 +1018,120 @@
    )     (
   (_|___|_)
         </pre>
-        <div style="font-family:'VT323',monospace;font-size:22px;color:#00cc44;text-shadow:0 0 8px rgba(0,200,80,0.5);letter-spacing:1px;margin-bottom:6px;animation:blink-txt 1.8s step-end infinite;">
-          IF YOU LIKED THIS PAGE — HIRE ME! (◕ ◡ ◕)
-        </div>
-        <div style="font-size:11px;color:#446644;font-family:'Courier New',monospace;">
-        </div>
+            <div
+              style="font-family:'VT323',monospace;font-size:22px;color:#00cc44;text-shadow:0 0 8px rgba(0,200,80,0.5);letter-spacing:1px;margin-bottom:6px;animation:blink-txt 1.8s step-end infinite;">
+              IF YOU LIKED THIS PAGE — HIRE ME! (◕ ◡ ◕)
+            </div>
+            <div style="font-size:11px;color:#446644;font-family:'Courier New',monospace;">
+            </div>
+          </div>
+
+          <!-- FOOTER BANNER -->
+          <div class="footer-banner">
+            <p>✨ THANK YOU FOR VISITING! ✨</p>
+            <p>Best viewed in 800x600 resolution &nbsp;|&nbsp; Netscape Navigator 4.0</p>
+          </div>
+
+          <!-- BADGES -->
+          <div class="badges">
+            <div class="badge-88 b-ie">Internet Explorer 6.0 COMPATIBLE</div>
+            <div class="badge-88 b-w3">HTML 3.2 VALIDATED</div>
+            <div class="badge-88 b-best">BEST VIEWED WITH EYES</div>
+            <div class="badge-88 b-made">MADE WITH ❤ AND HTML</div>
+          </div>
+
+          <!-- COPYRIGHT -->
+          <div class="copyright">
+            <p>© 2026 — present day. present time</p>
+            <p>BADAEVA YANA ❤ all layers are connected &nbsp;|&nbsp; No bugs were harmed</p>
+          </div>
+
+        </div><!-- /win-body -->
+      </div><!-- /win -->
+
+      <!-- VISITOR COUNTER -->
+      <div class="counter">
+        ⭐ You are visitor number <span class="counter-num" id="ctr">000000</span> ⭐
       </div>
 
-      <!-- FOOTER BANNER -->
-      <div class="footer-banner">
-        <p>✨ THANK YOU FOR VISITING! ✨</p>
-        <p>Best viewed in 800x600 resolution &nbsp;|&nbsp; Netscape Navigator 4.0</p>
+    </div><!-- /wrapper -->
+
+    <!-- SIDE GIFS -->
+    <div style="position:fixed;left:5px;top:5px;width:300px;z-index:100;transform:rotate(-1deg) translateY(20px);">
+      <img
+        src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHExajFkNm16NzByMGgyaGZmZDg3OWZuYjh1YTRtOTJvbjVsMGo3cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/LoHu91PlRLw1UoUkON/giphy.gif"
+        width="220" style="display:block;" />
+    </div>
+    <div style="position:fixed;left:200px;bottom:20px;width:300px;z-index:100;transform:rotate(-1deg) translateY(20px);">
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3emhreDUybHQ3eHg0eWs5cTA4bWI5cHFueTcxdGRwOXc3OHQ4dWY1diZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/8L0ONLimd2uWo9uyDG/giphy.gif"
+        width="320" style="display:block;" />
+    </div>
+    <div style="position:fixed;right:240px;top:340px;width:300px;z-index:100;transform:rotate(-1deg) translateY(20px);">
+      <div style="border:none;background:none;padding:2px;">
+        <img
+          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTd4NXRnYnloemVra2M3NTJhMnR4ZGd1NHl1bmJhdGZxamkyNG5zeiZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/cZ6EPpPoMPZ2Jba7kO/giphy.gif"
+          width="320" style="display:block;" />
       </div>
+    </div>
 
-      <!-- BADGES -->
-      <div class="badges">
-        <div class="badge-88 b-ie">Internet Explorer 6.0 COMPATIBLE</div>
-        <div class="badge-88 b-w3">HTML 3.2 VALIDATED</div>
-        <div class="badge-88 b-best">BEST VIEWED WITH EYES</div>
-        <div class="badge-88 b-made">MADE WITH ❤ AND HTML</div>
-      </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+      // skill squares — Windows 3.1 style
+      (function () {
+        const skills = [80, 75, 50, 45, 40, 40, 35, 30];
+        const TOTAL = 20;
+        skills.forEach((pct, i) => {
+          const filled = Math.round(pct / 100 * TOTAL);
+          const wrap = document.getElementById('s' + i);
+          if (!wrap) return;
+          for (let j = 0; j < TOTAL; j++) {
+            const sq = document.createElement('div');
+            sq.className = 'sq' + (j < filled ? ' filled' : '');
+            wrap.appendChild(sq);
+          }
+        });
+      })();
 
-      <!-- COPYRIGHT -->
-      <div class="copyright">
-        <p>© 2026 — present day. present time</p>
-        <p>BADAEVA YANA ❤ all layers are connected  &nbsp;|&nbsp; No bugs were harmed</p>
-      </div>
+      // visitor counter animation
+      let n = 0, target = 42;
+      const el = document.getElementById('ctr');
+      const t = setInterval(() => {
+        n++;
+        el.textContent = String(n).padStart(6, '0');
+        if (n >= target) clearInterval(t);
+      }, 60);
 
-    </div><!-- /win-body -->
-  </div><!-- /win -->
-
-  <!-- VISITOR COUNTER -->
-  <div class="counter">
-    ⭐ You are visitor number <span class="counter-num" id="ctr">000000</span> ⭐
-  </div>
-
-</div><!-- /wrapper -->
-  
-<!-- SIDE GIFS -->
-<div style="position:fixed;left:8px;top:120px;width:130px;z-index:100;display:flex;flex-direction:column;gap:8px;">
-  <div style="border:2px solid #334466;background:#000;padding:2px;">
-    <img src="https://media.tenor.com/8keo7oXCOC0AAAAC/internet.gif" width="126" style="display:block;"/>
-  </div>
-  <div style="border:2px solid #334466;background:#000;padding:2px;">
-    <img src="https://media.tenor.com/kKCzWBJMozsAAAAC/yes-computer.gif" width="126" style="display:block;"/>
-  </div>
-</div>
-
-<div style="position:fixed;right:8px;top:120px;width:130px;z-index:100;">
-  <div style="border:2px solid #334466;background:#000;padding:2px;">
-    <img src="https://media.tenor.com/8DcNQFNrpCAAAAAC/dancing-breakdance.gif" width="126" style="display:block;"/>
-  </div>
-</div>
-  
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // skill squares — Windows 3.1 style
-  (function() {
-    const skills = [80,75,50,45,40,40,35,30];
-    const TOTAL  = 20;
-    skills.forEach((pct, i) => {
-      const filled = Math.round(pct / 100 * TOTAL);
-      const wrap = document.getElementById('s'+i);
-      if(!wrap) return;
-      for(let j=0; j<TOTAL; j++){
-        const sq = document.createElement('div');
-        sq.className = 'sq' + (j < filled ? ' filled' : '');
-        wrap.appendChild(sq);
+      // whispers
+      const phrases = [
+        '> present day.  present time.',
+        '> no matter where you go, everyone is connected.',
+        '> present day.  present time.  HA HA HA.',
+        '> close this world.  open the next.',
+      ];
+      function spawnWhisper() {
+        const el = document.createElement('div');
+        el.className = 'whisper';
+        el.textContent = phrases[Math.floor(Math.random() * phrases.length)];
+        el.style.left = (5 + Math.random() * 70) + 'vw';
+        el.style.top = (10 + Math.random() * 75) + 'vh';
+        el.style.transform = `rotate(${(Math.random() - .5) * 4}deg)`;
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 5200);
       }
-    });
-  })();
-  
-  // visitor counter animation
-  let n = 0, target = 42;
-  const el = document.getElementById('ctr');
-  const t = setInterval(()=>{
-    n++;
-    el.textContent = String(n).padStart(6,'0');
-    if(n>=target) clearInterval(t);
-  }, 60);
+      function sched() { spawnWhisper(); setTimeout(sched, 13000 + Math.random() * 9000); }
+      setTimeout(sched, 6000);
 
-  // whispers
-  const phrases = [
-    '> present day.  present time.',
-    '> no matter where you go, everyone is connected.',
-    '> present day.  present time.  HA HA HA.',
-    '> close this world.  open the next.',
-  ];
-  function spawnWhisper(){
-    const el = document.createElement('div');
-    el.className = 'whisper';
-    el.textContent = phrases[Math.floor(Math.random()*phrases.length)];
-    el.style.left = (5+Math.random()*70)+'vw';
-    el.style.top  = (10+Math.random()*75)+'vh';
-    el.style.transform = `rotate(${(Math.random()-.5)*4}deg)`;
-    document.body.appendChild(el);
-    setTimeout(()=>el.remove(), 5200);
-  }
-  function sched(){ spawnWhisper(); setTimeout(sched, 13000+Math.random()*9000); }
-  setTimeout(sched, 6000);
-
-  // secret easter egg — konami code
-  let kk = [];
-  const konami = [38,38,40,40,37,39,37,39,66,65];
-  document.addEventListener('keydown', e=>{
-    kk.push(e.keyCode); kk = kk.slice(-10);
-    if(kk.join()==konami.join()){
-      const msg = document.createElement('div');
-      msg.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#000080;border:3px solid #00ff00;padding:24px 40px;font-family:VT323,monospace;font-size:28px;color:#00ff00;z-index:99999;text-align:center;text-shadow:0 0 10px #00ff00;box-shadow:0 0 40px rgba(0,255,0,0.3);';
-      msg.innerHTML = '🔓 CHEAT ACTIVATED<br><span style="font-size:18px;color:#aaffaa">skills += 100;<br>bugs -= infinity;</span>';
-      document.body.appendChild(msg);
-      setTimeout(()=>msg.remove(), 3000);
-    }
-  });
+      // secret easter egg — konami code
+      let kk = [];
+      const konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+      document.addEventListener('keydown', e => {
+        kk.push(e.keyCode); kk = kk.slice(-10);
+        if (kk.join() == konami.join()) {
+          const msg = document.createElement('div');
+          msg.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#000080;border:3px solid #00ff00;padding:24px 40px;font-family:VT323,monospace;font-size:28px;color:#00ff00;z-index:99999;text-align:center;text-shadow:0 0 10px #00ff00;box-shadow:0 0 40px rgba(0,255,0,0.3);';
+          msg.innerHTML = '🔓 CHEAT ACTIVATED<br><span style="font-size:18px;color:#aaffaa">skills += 100;<br>bugs -= infinity;</span>';
+          document.body.appendChild(msg);
+          setTimeout(() => msg.remove(), 3000);
+        }
+      });
