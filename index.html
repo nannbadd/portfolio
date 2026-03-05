@@ -609,8 +609,8 @@
 
       <!-- COPYRIGHT -->
       <div class="copyright">
-        <p>© 2026 BADAEVA YANA — present day. present time</p>
-        <p>2026❤️ all layers are connected  &nbsp;|&nbsp; No bugs were harmed</p>
+        <p>© 2026 — present day. present time</p>
+        <p>BADAEVA YANA ❤ all layers are connected  &nbsp;|&nbsp; No bugs were harmed</p>
       </div>
 
     </div><!-- /win-body -->
@@ -639,7 +639,22 @@
       }
     });
   })();
+  
+  // SIDE GIFS
+<div class="tenor-gif-embed" data-postid="9641974" data-share-method="host" data-aspect-ratio="1.06867" data-width="100%">
+  <a href="https://tenor.com/view/internet-gif-9641974">Internet GIF</a>
+</div>
 
+<div class="tenor-gif-embed" data-postid="16479993" data-share-method="host" data-aspect-ratio="1.24031" data-width="100%">
+  <a href="https://tenor.com/view/yes-computer-retro-meme-thumbs-up-gif-16479993">Yes Computer GIF</a>
+</div>
+
+<div class="tenor-gif-embed" data-postid="16063845" data-share-method="host" data-aspect-ratio="1.76796" data-width="100%">
+  <a href="https://tenor.com/view/dancing-breakdance-bboy-hip-hop-groove-gif-16063845">Dancing GIF</a>
+</div>
+
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  
   // visitor counter animation
   let n = 0, target = 42;
   const el = document.getElementById('ctr');
@@ -675,6 +690,10 @@
   document.addEventListener('keydown', e=>{
     kk.push(e.keyCode); kk = kk.slice(-10);
     if(kk.join()==konami.join()){
-      document.body.style.animation = 'none';
       const msg = document.createElement('div');
-      msg.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#000;border:3px
+      msg.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#000080;border:3px solid #00ff00;padding:24px 40px;font-family:VT323,monospace;font-size:28px;color:#00ff00;z-index:99999;text-align:center;text-shadow:0 0 10px #00ff00;box-shadow:0 0 40px rgba(0,255,0,0.3);';
+      msg.innerHTML = '🔓 CHEAT ACTIVATED<br><span style="font-size:18px;color:#aaffaa">skills += 100;<br>bugs -= infinity;</span>';
+      document.body.appendChild(msg);
+      setTimeout(()=>msg.remove(), 3000);
+    }
+  });
