@@ -1125,27 +1125,26 @@
       // secret easter egg — konami code
       let kk = [];
       const konami = [
-      'ArrowUp','ArrowUp',
-      'ArrowDown','ArrowDown',
-      'ArrowLeft','ArrowRight',
-      'ArrowLeft','ArrowRight',
-      'b','a'
+      "ArrowUp","ArrowUp",
+      "ArrowDown","ArrowDown",
+      "ArrowLeft","ArrowRight",
+      "ArrowLeft","ArrowRight",
+      "b","a"
       ];
       
-      document.addEventListener('keydown', e => {
-        kk.push(e.key);
+      document.addEventListener("keydown", e => {
+      
+        kk.push(e.key.toLowerCase());
         kk = kk.slice(-10);
-        console.log(e.key);
       
-       if (kk.length === konami.length && kk.join() === konami.join()) {
-          const msg = document.createElement('div');
+        if (kk.join() === konami.join()) {
+          const msg = document.createElement("div");
           msg.style.cssText =
-            'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#000080;border:3px solid #00ff00;padding:24px 40px;font-family:VT323,monospace;font-size:28px;color:#00ff00;z-index:99999;text-align:center;text-shadow:0 0 10px #00ff00;';
-          
+          "position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#000080;border:3px solid #00ff00;padding:24px 40px;font-family:VT323,monospace;font-size:28px;color:#00ff00;z-index:99999;text-align:center;";
           msg.innerHTML =
-            '🔓 CHEAT ACTIVATED<br><span style="font-size:18px;color:#aaffaa">skills += 100;<br>bugs -= infinity;</span>';
-      
+          "🔓 CHEAT ACTIVATED<br><span style='font-size:18px'>skills += 100;<br>bugs -= infinity;</span>";
           document.body.appendChild(msg);
+      
           setTimeout(() => msg.remove(), 3000);
-        }
-      });±
+        } 
+      }, true);
